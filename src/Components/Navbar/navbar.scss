@@ -1,0 +1,206 @@
+.navbar {
+  .top {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .item {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      text-decoration: underline;
+    }
+
+    .left {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      .item {
+        cursor: pointer;
+      }
+
+      .imageContainer {
+        height: 15px;
+        width: 40px;
+        display: flex;
+        margin-right: 10px;
+
+        .image {
+          width: 100%;
+        }
+      }
+
+      .language {
+      }
+    }
+
+    .center {
+      flex: 1;
+      text-align: center;
+      .link {
+        font-size: 60px;
+        letter-spacing: 3px;
+        font-family: "Italianno";
+        font-weight: bold;
+        color: navy;
+        transition: all 0.5s ease;
+        &:hover {
+          text-shadow: 0 0 5px navy;
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 25px;
+      .inputContainer {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        transition: all 0.3s ease; //Fix animation
+        color: #777;
+
+        .close {
+          cursor: pointer;
+          padding-right: 10px;
+        }
+        .input {
+          border: 2px solid #777;
+          padding: 15px;
+          width: 75%;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          input {
+            border: none;
+            outline: none;
+            width: 100%;
+          }
+          .search {
+            height: 100%;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .searchResults {
+        position: absolute;
+        z-index: 999;
+        background-color: white;
+        top: 67px;
+        right: 30px;
+        width: 509px;
+        .searchResult {
+          border-bottom: 1px solid lightgrey;
+          transition: all 0.5s ease;
+          padding: 10px;
+          &:hover {
+            background-color: rgb(242, 251, 255);
+          }
+          .link {
+          }
+          .item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            text-decoration: none;
+            img {
+              width: 80px;
+              height: 100px;
+              object-fit: cover;
+            }
+
+            .details {
+              h1 {
+                font-size: 18px;
+                font-weight: 500;
+                text-transform: capitalize;
+              }
+
+              p {
+                color: gray;
+                margin-bottom: 10px;
+                font-size: 14px;
+              }
+
+              .price {
+                color: #2879fe;
+              }
+            }
+          }
+        }
+      }
+
+      .icons {
+        display: flex;
+        gap: 15px;
+        color: #777;
+        cursor: pointer;
+        .icon {
+          transition: all 0.3s ease;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+
+        .cartIcon {
+          position: relative;
+          span {
+            font-size: 12px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #2879fe;
+            color: white;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(242, 251, 255);
+    gap: 100px;
+    text-transform: uppercase;
+    .item {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      position: relative;
+      padding: 0 10px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: rgb(97, 206, 242);
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -5px;
+        transition: 0.7s ease;
+      }
+      &:hover {
+        color: gray;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  display: flex;
+  overflow: hidden;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .carouselSlider {
+    .link {
+      text-decoration: none;
+      .card {
+        margin: 10px;
+        width: 300px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+
+        .imgWrapper {
+          position: relative;
+          padding-top: 100%;
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+
+        .infoWrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          h3 {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-size: 18px;
+            text-align: center;
+            font-weight: 300;
+            text-transform: capitalize;
+          }
+
+          p {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
+            font-weight: 600;
+            color: #2879fe;
+          }
+
+          button {
+            padding: 10px;
+            margin: 0 10px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: #0c61ea;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.5s ease;
+
+            &:hover {
+              background-color: #2879fe;
+            }
+          }
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        @media only screen and (max-width: 992px) {
+          width: 250px;
+        }
+
+        @media only screen and (max-width: 768px) {
+          width: 200px;
+        }
+
+        @media only screen and (max-width: 576px) {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+  }
+}
